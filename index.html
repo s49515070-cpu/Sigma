@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>67 Animation</title>
 
 <style>
@@ -16,19 +17,21 @@
     }
 
     .number {
-        font-size: 200px;
+        /* Größe jetzt responsiv: passt sich an Bildschirmbreite an */
+        font-size: 25vw; /* 25% der Bildschirmbreite */
         font-weight: bold;
         animation: rotate 3s linear infinite,
                    colorChange 1s infinite alternate;
+        text-align: center;
     }
 
     button {
-        margin-top: 40px;
-        padding: 15px 30px;
-        font-size: 20px;
+        margin-top: 5vw; /* Abstand proportional */
+        padding: 3vw 6vw; /* padding proportional */
+        font-size: 5vw; /* Schriftgröße proportional */
         cursor: pointer;
         border: none;
-        border-radius: 10px;
+        border-radius: 2vw;
         background: white;
     }
 
