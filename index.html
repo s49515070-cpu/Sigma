@@ -1,30 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <title>EINS</title>
-    <style>
-        body {
-            background-color: blue;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<title>67 Animation</title>
 
-        .redbutton {
-            background-color: red;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        overflow: hidden;
+    }
+
+    .number {
+        font-size: 200px;
+        font-weight: bold;
+        animation: rotate 3s linear infinite,
+                   colorChange 1s infinite alternate;
+    }
+
+    /* Dreh-Animation */
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
         }
-    </style>
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Farbwechsel-Animation */
+    @keyframes colorChange {
+        0%   { color: red; }
+        25%  { color: yellow; }
+        50%  { color: lime; }
+        75%  { color: cyan; }
+        100% { color: magenta; }
+    }
+</style>
+
 </head>
 <body>
 
-    <h1>11111</h1>
-
-    <button class="redbutton" onclick="window.location.href='ZWO.htm'">
-        NEXT
-    </button>
+<div class="number">67</div>
 
 </body>
 </html>
