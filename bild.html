@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mein Bild</title>
 
 <style>
@@ -9,35 +10,45 @@
         margin: 0;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background: black;
-        flex-direction: column;
-        color: white;
     }
 
     img {
-        max-width: 80%;
-        border-radius: 20px;
-        box-shadow: 0 0 40px white;
+        /* Bild maximal groß, responsiv und proportional */
+        max-width: 90vw;   /* max. 90% der Bildschirmbreite */
+        max-height: 80vh;  /* max. 80% der Bildschirmhöhe */
+        width: auto;
+        height: auto;
+        border-radius: 1vw;  /* optional abgerundete Ecken */
+        box-shadow: 0 0 20px white;
     }
 
-    a {
-        margin-top: 20px;
-        color: yellow;
-        font-size: 20px;
-        text-decoration: none;
+    button {
+        margin-top: 5vw;
+        padding: 3vw 6vw;
+        font-size: 5vw;
+        cursor: pointer;
+        border: none;
+        border-radius: 2vw;
+        background: white;
+    }
+
+    button:hover {
+        background: yellow;
     }
 </style>
 </head>
 
 <body>
 
-<h1>Der wahre Sigma 😎</h1>
+<img src="deinbild.jpg" alt="Mein Bild">
 
-<img src="meinbild.jpg" alt="Mein Bild">
-
-<a href="index.html">Zurück</a>
+<button onclick="window.location.href='index.html'">
+    Zurück zur Animation
+</button>
 
 </body>
 </html>
