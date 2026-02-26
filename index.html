@@ -9,10 +9,10 @@
         margin: 0;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background: black;
-        overflow: hidden;
     }
 
     .number {
@@ -22,30 +22,42 @@
                    colorChange 1s infinite alternate;
     }
 
-    /* Dreh-Animation */
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
+    button {
+        margin-top: 40px;
+        padding: 15px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        background: white;
     }
 
-    /* Farbwechsel-Animation */
+    button:hover {
+        background: yellow;
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
     @keyframes colorChange {
-        0%   { color: red; }
-        25%  { color: yellow; }
-        50%  { color: lime; }
-        75%  { color: cyan; }
+        0% { color: red; }
+        25% { color: yellow; }
+        50% { color: lime; }
+        75% { color: cyan; }
         100% { color: magenta; }
     }
 </style>
-
 </head>
+
 <body>
 
 <div class="number">67</div>
+
+<button onclick="window.location.href='bild.html'">
+    Zu meinem Bild
+</button>
 
 </body>
 </html>
